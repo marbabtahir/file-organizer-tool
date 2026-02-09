@@ -1,10 +1,10 @@
 {
-  "name": "fileorganizer",
+  "name": "file-organizer-tool",
   "version": "1.0.1",
   "description": "Professional CLI for organizing files, metadata extraction, duplicate detection, and batch operations",
   "main": "dist/src/index.js",
   "bin": {
-    "fileorganizer": "dist/bin/cli.js"
+    "file-organizer-tool": "dist/bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
