@@ -1,0 +1,51 @@
+{
+  "name": "filetool",
+  "version": "1.0.0",
+  "description": "Professional CLI for organizing files, metadata extraction, duplicate detection, and batch operations",
+  "main": "dist/src/index.js",
+  "bin": {
+    "filetool": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bin/cli.js",
+    "dev": "ts-node bin/cli.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "file-organizer",
+    "metadata",
+    "duplicates",
+    "batch",
+    "watch",
+    "rename",
+    "exif"
+  ],
+  "author": "Arbab Tahir <arbabtahir2244@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marbabtahir/file-organizer-tool.git"
+  },
+  "homepage": "https://github.com/marbabtahir/file-organizer-tool#readme",
+  "bugs": {
+    "url": "https://github.com/marbabtahir/file-organizer-tool/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "exif-parser": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.2"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
