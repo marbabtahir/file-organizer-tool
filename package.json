@@ -4,7 +4,7 @@
   "description": "Professional CLI for organizing files, metadata extraction, duplicate detection, and batch operations",
   "main": "dist/src/index.js",
   "bin": {
-    "filetool": "./dist/bin/cli.js"
+    "filetool": "dist/bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marbabtahir/file-organizer-tool.git"
+    "url": "git+https://github.com/marbabtahir/file-organizer-tool.git"
   },
   "homepage": "https://github.com/marbabtahir/file-organizer-tool#readme",
   "bugs": {
