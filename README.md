@@ -13,8 +13,8 @@ This tool is designed for automation, performance, and extensibility. It support
 **Prerequisites:** Node.js 16+
 
 ```bash
-# From npm (when published)
-npm install -g filetool
+# From npm
+npm install -g file-organizer-tool
 
 # Or from source
 git clone https://github.com/marbabtahir/file-organizer-tool.git
@@ -23,18 +23,39 @@ npm install
 npm run build
 ```
 
-**Run:** `filetool --help` or `node dist/bin/cli.js --help` when run from source.
+**Run:** `file-organizer-tool --help` or `node dist/bin/cli.js --help` when run from source.
+
+### Command not found? (Windows / PATH)
+
+If `file-organizer-tool` is not recognized after install, the npm global bin directory may not be in your PATH. Fix it:
+
+1. Get the npm global prefix (install directory):
+   ```bash
+   npm config get prefix
+   ```
+   Example output: `C:\Users\YourName\AppData\Roaming\npm`
+
+2. Add that folder to your **PATH**:
+   - **Windows:** Settings → System → About → Advanced system settings → Environment Variables → under "User variables" select **Path** → Edit → New → paste the path from step 1 → OK.
+   - **macOS/Linux:** Add `export PATH="$(npm config get prefix)/bin:$PATH"` to your `~/.bashrc` or `~/.zshrc`.
+
+3. Close and reopen your terminal, then run:
+   ```bash
+   file-organizer-tool --version
+   ```
+
+Alternatively, you can run the CLI without global install: `npx file-organizer-tool --help`
 
 ---
 
 ## Quick start
 
 ```bash
-filetool init                          # Create .filetoolrc.json in current directory
-filetool organize ./downloads --dry-run # Preview organize by type
-filetool metadata README.md             # Show file metadata
-filetool rename ./photos --format "{date}_{index}" --dry-run
-filetool duplicates ./folder --dry-run  # Find duplicate files
+file-organizer-tool init                          # Create .filetoolrc.json in current directory
+file-organizer-tool organize ./downloads --dry-run # Preview organize by type
+file-organizer-tool metadata README.md             # Show file metadata
+file-organizer-tool rename ./photos --format "{date}_{index}" --dry-run
+file-organizer-tool duplicates ./folder --dry-run  # Find duplicate files
 ```
 
 Use `--dry-run` on organize, rename, and duplicates to preview without changing files.
@@ -299,12 +320,12 @@ Example: `report.json`
 # CLI Command Overview
 
 ```
-filetool organize <path> [options]
-filetool metadata <file>
-filetool rename <path> [options]
-filetool duplicates <path> [options]
-filetool watch <path> [options]
-filetool init
+file-organizer-tool organize <path> [options]
+file-organizer-tool metadata <file>
+file-organizer-tool rename <path> [options]
+file-organizer-tool duplicates <path> [options]
+file-organizer-tool watch <path> [options]
+file-organizer-tool init
 ```
 
 ---
